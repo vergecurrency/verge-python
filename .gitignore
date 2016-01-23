@@ -1,0 +1,6 @@
+*.pyc
+*~
+sphinx/build
+build
+dist
+src/bitcoin_python.egg-info

@@ -1,0 +1,400 @@
+2014-03-02 17:55:05 -0600 Naveen Garg 
+
+	* add importprivkey method
+
+2014-02-26 15:34:39 -0800 Peter Harrington 
+
+	* Update config.py
+
+2014-01-28 19:58:26 +0100 Jean-Christophe Saad-Dupuy 
+
+	* updated changelog
+
+2014-01-28 19:26:06 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Version bump (tag: v0.1.2)
+
+2014-01-28 11:31:13 -0600 benfbat 
+
+	* Update config.py
+
+2014-01-27 23:08:33 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Added support for loading verge.conf under windows
+
+2014-01-26 23:00:57 +0100 jcsaaddupuy 
+
+	* Update README.rst
+
+2014-01-26 23:06:44 +0100 Jean-Christophe Saad-Dupuy 
+
+	* markdown
+
+2014-01-26 23:05:31 +0100 Jean-Christophe Saad-Dupuy 
+
+	* updated verge-qt connection instructions
+
+2014-01-22 02:26:02 +0100 Jean-Christophe Saad-Dupuy 
+
+	* fixed markdown
+
+2014-01-22 02:24:44 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Added instruction for connection with verge-t
+
+2014-01-21 18:51:36 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Updated documentation link
+
+2014-01-21 18:41:36 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Updated changelog (tag: v0.1.1)
+
+2014-01-21 18:41:09 +0100 Jean-Christophe Saad-Dupuy 
+
+	* updated version in documentation
+
+2014-01-21 09:55:38 +0100 jcsaaddupuy 
+
+	* Update README.rst
+
+2014-01-20 21:17:42 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Removed pip instructions
+
+2014-01-20 20:52:44 +0100 Jean-Christophe Saad-Dupuy 
+
+	* bump version
+
+2014-01-20 20:52:18 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Removed uggly print
+
+2014-01-20 20:43:03 +0100 jcsaaddupuy 
+
+	* Update README.rst
+
+2014-01-20 20:35:00 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Updated tests
+
+2014-01-20 20:31:26 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Fixed markdown typo
+
+2014-01-20 20:27:42 +0100 Jean-Christophe Saad-Dupuy 
+
+	* version reset (dogedev)
+
+2014-01-20 20:26:08 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Updated documentation
+
+2014-01-20 19:58:38 +0100 Jean-Christophe Saad-Dupuy 
+
+	* changed default rpc port
+
+2014-01-20 19:41:43 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Migration bitcoin -> verge
+
+2014-01-20 19:12:31 +0100 Jean-Christophe Saad-Dupuy 
+
+	* Changed bitcoin -> verge
+
+2013-12-26 10:33:05 +0100 Wladimir J. van der Laan 
+
+	* fix documentation for sendtoaddress
+
+2013-12-01 01:05:30 -0500 jon 
+
+	* Changed iterkeys() to keys() to make the code python3 compatible. The method keys() exists in both python 2 and 3 but keysiter() does not exist in python 3 since keys() by defaults returns an iterator.
+
+2013-10-29 12:02:27 -0200 Leandro Boscariol 
+
+	* Made sure the code will raise InsufficientFunds or stop
+
+2013-10-29 11:14:15 -0200 Leandro Boscariol 
+
+	* Work around to raise InsufficientFunds exception when needed
+
+2013-09-27 15:49:55 +0200 Nicolas Kuttler 
+
+	* Add signmessage and verifymessage support
+
+2013-09-27 14:29:31 +0200 Nicolas Kuttler 
+
+	* Add --noremote option
+
+2013-09-27 13:08:17 +0200 Nicolas Kuttler 
+
+	* Make the test runs configurable
+
+2013-09-11 18:16:59 +0200 mUniKeS 
+
+	* Add gettxout function
+
+2013-09-02 19:46:04 +0200 Wladimir J. van der Laan 
+
+	* connect_to_local: check cfg for None
+
+2013-05-30 17:59:03 +0200 Oliver Gasser 
+
+	* Add dumpprivkey() function.
+
+2013-05-30 16:48:03 +0200 Oliver Gasser 
+
+	* Use items() instead of iteritems().
+
+2013-04-25 08:27:27 +0300 Aviad Reich 
+
+	* pep8 styling conventions
+
+2013-04-24 22:39:24 -0600 Jeff Cook 
+
+	* Raise a TransportException on HTTP 403.
+
+2013-04-24 22:39:06 -0600 Jeff Cook 
+
+	* Define TransportException exception class.
+
+2013-04-22 14:05:03 +0400 Nikolay Belikov 
+
+	* + Added exception wrapper into AuthServiceProxy
+
+2013-04-21 08:56:40 -0600 Jeff Cook 
+
+	* Inform user when 403 Forbidden is sent by bitcoind.
+
+2013-04-21 13:07:59 +0300 Aviad Reich 
+
+	* add tests for connect_to_remote. SSL is Faulty
+
+2013-04-17 12:49:35 +0400 Nikolay Belikov 
+
+	* ! Minor code style fixes
+
+2013-04-16 18:46:46 +0400 Nikolay Belikov 
+
+	* Major overhaul of AuthServiceProxy
+
+2013-04-14 21:35:38 -0500 Jason Kölker 
+
+	* Allow getbalance default account with minconf=0
+
+2013-03-30 16:32:59 +0100 Wladimir J. van der Laan 
+
+	* bump version number to 0.3 (tag: v0.3)
+
+2013-03-30 16:13:06 +0100 Aviad Reich 
+
+	* add keypoolrefill method
+
+2013-03-20 00:33:59 +0200 Aviad Reich 
+
+	* raw transaction support added
+
+2013-03-21 14:41:33 +0200 Aviad Reich 
+
+	* cherry pick to fix dont_raise so it only blocks the correct exceptions to return a boolean (origin/wallet_locking)
+
+2013-03-29 10:15:09 +0300 Aviad Reich 
+
+	* ignore dist and python_egg
+
+2013-03-23 19:08:46 +0000 Aviad Reich 
+
+	* deprecated getblocknumber - use getblockcount instead
+
+2013-03-19 23:01:18 +0200 Aviad Reich 
+
+	* add wallet locking/unlocking support
+
+2013-03-19 14:42:26 +0200 Aviad Reich 
+
+	* in listtransactions, iterate all accounts if account is None (origin/listtransactions)
+
+2013-03-19 11:16:38 +0200 Aviad Reich 
+
+	* listaccounts can return a dictionary from account names to their balance if the param as_dict is True, update tests. (origin/listaccounts)
+
+2013-03-19 09:44:20 +0200 Aviad Reich 
+
+	* add tests for listunspent and getmininginfo
+
+2013-03-18 08:18:23 +0200 Aviad Reich 
+
+	* refactor __repr__
+
+2013-03-17 09:43:44 +0200 Aviad Reich 
+
+	* flake8 style conventions fixes
+
+2013-03-18 00:13:42 +0200 Aviad Reich 
+
+	* add listunspent method
+
+2013-03-17 23:46:44 +0200 Aviad Reich 
+
+	* add support for getmininginfo
+
+2013-03-17 16:37:09 +0200 Aviad Reich 
+
+	* Issue #15: add from parameter to listtransactions
+
+2013-03-15 22:14:10 +0100 David Barton 
+
+	* Fixed usage.rst broken links
+
+2013-03-14 09:26:23 +0200 Aviad Reich 
+
+	* connect_to_local(): use default testnet port, when the config file has testnet=x
+
+2013-02-10 17:35:14 +0100 Adrian 
+
+	* Add getrawtransaction method
+
+2013-01-16 03:28:11 +0100 Thomas Steen Rasmussen 
+
+	* fix bug when rpc reply error is null in json
+
+2012-12-12 00:14:34 +0100 Benoît HERVIER 
+
+	* There isn't always an error key in resp dict
+
+2012-12-12 00:12:40 +0100 Benoît HERVIER 
+
+	* There isn't always an error key in resp dict
+
+2012-12-12 00:10:41 +0100 Benoît HERVIER 
+
+	* Allow use of https
+
+2012-12-12 00:09:38 +0100 Benoît HERVIER 
+
+	* Allow use of https
+
+2012-10-29 16:46:18 +0100 Harald Schilly 
+
+	* assert that we are really in the testnet
+
+2012-10-28 23:25:25 +0100 Harald Schilly 
+
+	* optionally allow to pass in the path to the bitcoin.conf file if it is at a non-standard path
+
+2012-10-28 21:52:48 +0100 Harald Schilly 
+
+	* fixing tests
+
+2012-10-23 02:57:40 +0200 Thomas Steen Rasmussen 
+
+	* Add support for the 'verifymessage' RPC command
+
+2012-10-05 18:45:50 +0200 Wladimir J. van der Laan 
+
+	* Switch to jgarzik's jsonrpc implementation
+
+2012-10-05 18:32:23 +0200 Wladimir J. van der Laan 
+
+	* Use RPC error codes from bitcoin core source
+
+2012-07-15 12:07:53 +0400 Alexander Petrovich 
+
+	* Added listsinceblock, getblock, getblockhash
+
+2011-09-04 15:17:44 +0200 Jure Vrscaj 
+
+	* Added sendmany command.
+
+2011-08-24 17:28:14 +0000 toomanysecrets0 
+
+	* Edited README.rst via GitHub
+
+2011-08-24 16:57:01 +0000 toomanysecrets0 
+
+	* under new management
+
+2011-08-24 14:56:22 +0200 Wladimir J. van der Laan 
+
+	* update changelog
+
+2011-08-24 14:53:53 +0200 Wladimir J. van der Laan 
+
+	* allow listtransactions() (default to '' account), add test for gettransaction
+
+2011-08-24 11:20:43 +0200 Wladimir J. van der Laan 
+
+	* add license (MIT) (tag: v0.2)
+
+2011-08-24 23:00:01 +0300 Wladimir J. van der Laan 
+
+	* mention cheeseshop page
+
+2011-08-24 10:16:46 +0200 Wladimir J. van der Laan 
+
+	* link to new doc
+
+2011-08-24 10:09:12 +0200 Wladimir J. van der Laan 
+
+	* rename package to 'bitcoinrpc'
+
+2011-08-24 09:42:34 +0200 Wladimir J. van der Laan 
+
+	* add neccesary metadata
+
+2011-08-24 09:22:43 +0200 Witchspace 
+
+	* Version bump
+
+2011-08-20 09:00:18 +0400 Alexander Petrovich 
+
+	* Edited src/bitcoin/connection.py via GitHub
+
+2011-07-04 13:52:17 +0100 Greg Hughes 
+
+	* Look in correct location for bitcoin.conf on Mac OS X
+
+2011-06-06 15:48:41 +0200 Daniel Poelzleithner 
+
+	* add minconf to getbalance
+
+2011-06-06 15:47:39 +0200 Daniel Poelzleithner 
+
+	* add listtransactions address filter
+
+2011-06-06 15:46:30 +0200 Daniel Poelzleithner 
+
+	* fix bug in listreceivedbyaddress
+
+2011-05-18 21:10:47 +0200 Witchspace 
+
+	* add TODOs
+
+2011-05-18 21:10:11 +0200 Witchspace 
+
+	* add TODOs
+
+2011-05-18 20:54:47 +0200 Witchspace 
+
+	* default rpcuser to ''
+
+2011-05-16 17:43:04 -0300 Carlos da Costa 
+
+	* Ignore comments in the read_config_file. Ignore lines without '='.
+
+2011-03-29 15:06:10 +0200 Jure Vrscaj 
+
+	* Added "listaccounts" command.
+
+2010-12-20 18:29:30 -0800 Stephen 
+
+	* Add import BitcoinConnection to connect_to_remote()
+
+2010-12-20 18:29:30 -0800 Stephen 
+
+	* Add import BitcoinConnection to connect_to_remote()
+
+2010-12-11 20:13:00 +0100 Witchspace 
+
+	* initial commit (tag: v0.1.0)
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>vergerpc.exceptions — Exception definitions &mdash; verge-python 0.1.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="verge-python 0.1.3 documentation" href="index.html" />
+    <link rel="up" title="API reference" href="apireference.html" />
+    <link rel="next" title="vergerpc.data — VERGE RPC service, data objects" href="vergerpc.data.html" />
+    <link rel="prev" title="vergerpc.connection — Connect to VERGE server via JSON-RPC" href="vergerpc.connection.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vergerpc.data.html" title="vergerpc.data — VERGE RPC service, data objects"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vergerpc.connection.html" title="vergerpc.connection — Connect to VERGE server via JSON-RPC"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">verge-python 0.1.3 documentation</a> &raquo;</li>
+          <li><a href="apireference.html" accesskey="U">API reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-vergerpc.exceptions">
+<span id="vergerpc-exceptions-exception-definitions"></span><h1><a class="reference internal" href="#module-vergerpc.exceptions" title="vergerpc.exceptions"><tt class="xref py py-mod docutils literal"><span class="pre">vergerpc.exceptions</span></tt></a> &#8212; Exception definitions<a class="headerlink" href="#module-vergerpc.exceptions" title="Permalink to this headline">¶</a></h1>
+<p>Exception definitions.</p>
+<dl class="exception">
+<dt id="vergerpc.exceptions.ClientException">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">ClientException</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.ClientException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>P2P network error.
+This exception is never raised but functions as a superclass
+for other P2P client exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.VERGEException">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">VERGEException</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.VERGEException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.Exception</span></tt></p>
+<p>Base class for exceptions received from VERGE server.</p>
+<ul class="simple">
+<li><em>code</em> &#8211; Error code from <tt class="docutils literal"><span class="pre">verged</span></tt>.</li>
+</ul>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.DownloadingBlocks">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">DownloadingBlocks</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.DownloadingBlocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.ClientException" title="vergerpc.exceptions.ClientException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.ClientException</span></tt></a></p>
+<p>Client is still downloading blocks.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.InsufficientFunds">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">InsufficientFunds</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.InsufficientFunds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Insufficient funds to complete transaction in wallet or account</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.InvalidAccountName">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">InvalidAccountName</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.InvalidAccountName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Invalid account name</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.InvalidAddressOrKey">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">InvalidAddressOrKey</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.InvalidAddressOrKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>Invalid address or key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vergerpc.exceptions.InvalidAmount">
+<tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">InvalidAmount</tt><a class="headerlink" href="#vergerpc.exceptions.InvalidAmount" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#vergerpc.exceptions.JSONTypeError" title="vergerpc.exceptions.JSONTypeError"><tt class="xref py py-class docutils literal"><span class="pre">JSONTypeError</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.InvalidParameter">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">InvalidParameter</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.InvalidParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>Invalid parameter provided to RPC call.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vergerpc.exceptions.InvalidTransactionID">
+<tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">InvalidTransactionID</tt><a class="headerlink" href="#vergerpc.exceptions.InvalidTransactionID" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#vergerpc.exceptions.InvalidAddressOrKey" title="vergerpc.exceptions.InvalidAddressOrKey"><tt class="xref py py-class docutils literal"><span class="pre">InvalidAddressOrKey</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.JSONTypeError">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">JSONTypeError</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.JSONTypeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>Unexpected type was passed as parameter</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.KeypoolRanOut">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">KeypoolRanOut</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.KeypoolRanOut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Keypool ran out, call keypoolrefill first</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.NotConnected">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">NotConnected</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.NotConnected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.ClientException" title="vergerpc.exceptions.ClientException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.ClientException</span></tt></a></p>
+<p>Not connected to any peers.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.OutOfMemory">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">OutOfMemory</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.OutOfMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>Out of memory during operation.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.SafeMode">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">SafeMode</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.SafeMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>Operation denied in safe mode (run <tt class="docutils literal"><span class="pre">verged</span></tt> with <tt class="docutils literal"><span class="pre">-disablesafemode</span></tt>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vergerpc.exceptions.SendError">
+<tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">SendError</tt><a class="headerlink" href="#vergerpc.exceptions.SendError" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">WalletError</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.TransportException">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">TransportException</tt><big>(</big><em>msg</em>, <em>code=None</em>, <em>protocol=None</em>, <em>raw_detail=None</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.TransportException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.Exception</span></tt></p>
+<p>Class to define transport-level failures.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.WalletAlreadyUnlocked">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">WalletAlreadyUnlocked</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.WalletAlreadyUnlocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Wallet is already unlocked</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.WalletEncryptionFailed">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">WalletEncryptionFailed</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.WalletEncryptionFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Failed to encrypt the wallet</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.WalletError">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">WalletError</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.WalletError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.VERGEException" title="vergerpc.exceptions.VERGEException"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.VERGEException</span></tt></a></p>
+<p>Unspecified problem with wallet (key not found etc.)</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.WalletPassphraseIncorrect">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">WalletPassphraseIncorrect</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.WalletPassphraseIncorrect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>The wallet passphrase entered was incorrect</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.WalletUnlockNeeded">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">WalletUnlockNeeded</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.WalletUnlockNeeded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Enter the wallet passphrase with walletpassphrase first</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vergerpc.exceptions.WalletWrongEncState">
+<em class="property">exception </em><tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">WalletWrongEncState</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.WalletWrongEncState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#vergerpc.exceptions.WalletError" title="vergerpc.exceptions.WalletError"><tt class="xref py py-class docutils literal"><span class="pre">vergerpc.exceptions.WalletError</span></tt></a></p>
+<p>Command given in wrong wallet encryption state (encrypting an encrypted wallet etc.)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vergerpc.exceptions.wrap_exception">
+<tt class="descclassname">vergerpc.exceptions.</tt><tt class="descname">wrap_exception</tt><big>(</big><em>error</em><big>)</big><a class="headerlink" href="#vergerpc.exceptions.wrap_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a JSON error object to a more specific VERGE exception.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="vergerpc.connection.html"
+                        title="previous chapter"><tt class="docutils literal"><span class="pre">vergerpc.connection</span></tt> &#8212; Connect to VERGE server via JSON-RPC</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vergerpc.data.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">vergerpc.data</span></tt> &#8212; VERGE RPC service, data objects</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/vergerpc.exceptions.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vergerpc.data.html" title="vergerpc.data — VERGE RPC service, data objects"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vergerpc.connection.html" title="vergerpc.connection — Connect to VERGE server via JSON-RPC"
+             >previous</a> |</li>
+        <li><a href="index.html">verge-python 0.1.3 documentation</a> &raquo;</li>
+          <li><a href="apireference.html" >API reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, verge-python developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>
