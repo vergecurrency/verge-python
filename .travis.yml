@@ -1,0 +1,17 @@
+language: python
+python:
+- 2.7
+install:
+  - if [[ $TRAVIS_PYTHON_VERSION < '2.7' ]]; then pip install -q --use-mirrors argparse; fi
+  - python setup.py install -q
+script: python tests/test.py --envconfig
+notifications:
+  irc:
+    skip_join: true
+    on_success: change
+    on_failure: change
+    channels:
+    - irc.freenode.org#verge
+  email:
+    on_success: never
+    on_failure: change
