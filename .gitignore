@@ -3,4 +3,8 @@
 sphinx/build
 build
 dist
-src/bitcoin_python.egg-info
+src/verge_python.egg-info
+
+# IDE
+.idea
+out/
